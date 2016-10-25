@@ -18,3 +18,10 @@ to run on a schedule, the functionality of the script works giving the path to t
 to be parsed through the command line
 For example
 python errors500.py /var/log/apache/2016_10_24_21.log
+
+
+
+###Deploy Jar###
+For this script to work ansible need to be properly configured in the local host and the remote host as well.
+A var file was added in the data directory, to have stored the hosts list where the jar want to be deployed,
+also the source and destination path of the jar file.
