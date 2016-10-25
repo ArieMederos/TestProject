@@ -1,0 +1,4 @@
+---
+REMOTE_DIRECTORY: /tmp/
+SRC_DIRECTORY: /tmp/tets.jar
+list: #remote host

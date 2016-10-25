@@ -1,0 +1,21 @@
+---
+- name: Update Jazz build toolkit
+  hosts: "{{list}}"
+  vars_files:
+  - ./data/var_file.txt
+
+
+- tasks:
+
+  - name: 'Create directory in remote host'
+    file: path="{{REMOTE_DIRECTORY}}" state=directory mode=0755
+
+
+  - name: 'Copies the jar file'
+    copy: src="{{SRC_DIRECTORY}}" dest="{{REMOTE_DIRECTORY}}"
+
+  - name: starts the app
+    sudo: yes
+    service: name=app state=started
+
+  - debug: msg="Deploy complete..."
